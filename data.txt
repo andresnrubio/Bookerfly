@@ -7,3 +7,4 @@ Password: FL3VDX6HLdp1Swm2
 
 DB_URI:
 mongodb+srv://bookerflyApiRest:FL3VDX6HLdp1Swm2@cluster0.v5l1e.mongodb.net/bookerflydb?retryWrites=true&w=majority
+
