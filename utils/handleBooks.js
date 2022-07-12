@@ -1,0 +1,17 @@
+const multer = require("multer");
+
+const storage = multer.diskStorage({
+    destination:function(req, file, cb){
+    const pathStorage = `${__dirname}/../storage`;
+    cb(null, pathStorage)
+    },filename:function(req, file, cb){
+        //* split file extension and get the last element of the array with pop
+        const ext = file.originalname.split(".").pop();
+        const filename =`file-${Date.now()}-${file.originalname.split(".").shift()}.${ext}`;
+        cb(null, filename);
+    }
+    })
+    
+    const uploadMiddleware = multer({storage});
+    
+    module.exports = uploadMiddleware
